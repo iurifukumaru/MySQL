@@ -1,0 +1,17 @@
+ps ax | grep mysql
+ls -al /usr/sbin/mysql* // for find if there is files related to MySQL app
+ls -al /usr/bin/mysql* // same as line 2 but for VM
+sudo ls -al /usr/lib/mysql* // another command to find more MySQL related files
+sudo ls -al /var/lib/mysql* // another command to find more MySQL related files
+// in  MySQL site, downloads, go to MySQL APT repository and download
+sudo dpkg -i mysql-apt-config_0.8.17-1_all.deb  //to install the pkg
+sudo apt-get update
+sudo apt-get -y install mysql-server
+ps ax | grep mysql
+sudo service mysql status
+q // to exit the status
+sudo service mysql stop
+sudo service mysql start
+mysql -u root -p // to run MySQL in CLI
+show databases;
+quit
