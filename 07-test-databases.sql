@@ -1,4 +1,5 @@
 -- test installed databases
+SHOW DATABASES;
 
 USE world;
 SHOW tables;
