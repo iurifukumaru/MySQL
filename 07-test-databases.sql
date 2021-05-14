@@ -15,3 +15,9 @@ SELECT * FROM album;
 
 ALTER USER 'tempuser'@'localhost' PASSWORD EXPIRE INTERVAL 90 DAYS;
 DROP USER 'tempuser'@'localhost';
+
+CREATE TABLE IF NOT EXISTS test (
+  id INT,
+  cname VARCHAR(128),
+  localname VARCHAR(128)
+) ENGINE = CSV;
