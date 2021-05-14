@@ -12,3 +12,6 @@ SHOW tables;
 
 USE album;
 SELECT * FROM album;
+
+ALTER USER 'tempuser'@'localhost' PASSWORD EXPIRE INTERVAL 90 DAYS;
+DROP USER 'tempuser'@'localhost';
