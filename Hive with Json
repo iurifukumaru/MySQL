@@ -1,0 +1,32 @@
+CREATE EXTERNAL TABLE ext_system_info (
+  last_updated string,
+  ttl INT,
+  data struct<`system_id`:string,
+              language:string,
+              name:string,
+              short_name:string,
+              operator:string,
+              url:string,
+              purchase_url:string,
+              start_date:string,
+              phone_number:string,
+              email:string,
+              license_url:string,
+              timezone:string
+              >
+  ) 
+ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
+LOCATION '/user//iuri'
+
+SELECT data.system_id,
+  data.language, 
+  data.name,
+  data.short_name,
+  data.operator,
+  data.url,
+  data.start_date,
+  data.phone_number,
+  data.email,
+  data.license_url,
+  data.timezone
+FROM ext_system_info_v2
