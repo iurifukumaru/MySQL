@@ -21,3 +21,5 @@ CREATE TABLE IF NOT EXISTS test (
   cname VARCHAR(128),
   localname VARCHAR(128)
 ) ENGINE = CSV;
+
+select table_name, engine from information_schema.tables where table_schema = 'scratch';
